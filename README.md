@@ -1,4 +1,3 @@
-# -Dipanshu-Omar-Sankalp
 # Automotive Insights: Interactive Data Visualization
 ### By Dipanshu Singh, Sankalp Rajeev, Omar Hernandez
 
