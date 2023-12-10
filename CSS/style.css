@@ -1,0 +1,394 @@
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+.legend rect {
+    cursor: pointer;
+}
+
+.legend text {
+    pointer-events: none;
+}
+
+#actual-container {
+    width: 100%;
+    height: 600px;
+    /* Adjust as needed */
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.scroll-trigger {
+    height: 50px;
+    background-color: #f0f0f0;
+    /* Additional styling */
+}
+
+#heatmap-container {
+    width: 100%;
+    height: 600px;
+    /* Adjust as needed */
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+#innovative-container {
+    width: 100%;
+    height: 600px;
+    /* Adjust as needed */
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+#container {
+    width: 100%;
+    height: 600px;
+    /* Adjust as needed */
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+#actual-container-line-chart {
+    width: 100%;
+    height: 600px;
+    /* Adjust as needed */
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+
+
+
+.on-hover-element:hover+.tooltip {
+    opacity: 1;
+    top: 100%;
+    /* Position below the element */
+    left: 50%;
+    /* Center it */
+    transform: translateX(-50%);
+    /* Adjust horizontal position */
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Google Font */
+    color: #333;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    line-height: 1.6;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin-top: 0;
+}
+
+#chart-area {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    width: calc(100% - 10px);
+    /* height: 100vh; */
+    /* border: solid 2px rgb(243, 16, 16); */
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+#heatmap-container {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* tree map css */
+#brand-checkboxes {
+    max-height: 100px;
+    margin: 5px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#chart {
+    width: 100%;
+    flex: 1;
+}
+
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 10px);
+    /* max-height: calc(100vh - 60px); */
+    /* Adjusted from height to max-height */
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.text-area {
+    font-family: 'Arial', sans-serif;
+    /* Modern, readable font */
+    font-size: 1.1em;
+    /* Slightly larger font size */
+    background-color: #f9f9f9;
+    /* Softer background color */
+    color: #333;
+    /* Darker font color for contrast */
+    padding: 50px;
+    /* Ample padding */
+    margin: 5px 0;
+    border: 2px solid black;
+    /* Spacing between text areas */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    line-height: 1.8;
+    /* Increased line spacing */
+    word-wrap: break-word;
+    text-align: justify;
+    /* Justified text for neat alignment */
+    overflow-y: auto;
+    /* Scrollable for longer texts */
+    max-height: 350px;
+    /* Adjusted maximum height */
+    box-sizing: border-box;
+}
+
+
+select {
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.page-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    /* Light gray background */
+    border-bottom: 1px solid #ddd;
+    /* Add a subtle border */
+}
+
+.page-header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.team-members {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+    /* Slightly subdued text color for the team member names */
+}
+
+.info-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    /* Adjust position as needed */
+    top: 10px;
+    right: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*      Donut CSS       */
+
+
+#donut-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 500px;
+    /* Set a fixed height */
+    margin: auto;
+    border: 2px solid black;
+    /* Center within the parent element */
+    padding: 40px;
+}
+
+  
+.donut-legend {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .donut-legend-rect {
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+        }
+
+        .donut-legend-text {
+            white-space: nowrap;
+        }
+.donut-legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.donut-legend-rect {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.donut-legend-text {
+    white-space: nowrap;
+}
+
+
+/*      Bee CSS       */
+
+
+.tooltip-bee {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0.9;
+
+}
+
+#brand-checkboxes-bee {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 120px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+
+}
+
+
+
+#bee-chart {
+    width: 1840px;
+    height: 1100px;
+    margin: top 5, right 20, bottom 20, left 20;
+
+    border: solid black;
+}
+
+
+#bee-container {
+    display: flex;
+    flex-direction: column;
+    width: 2000px;
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.bold-label {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+.page-footer {
+    position: fixed;   /* Makes the footer stick to the bottom */
+    left: 0;           /* Aligns the footer to the left */
+    bottom: 0;         /* Positions the footer at the bottom of the viewport */
+    width: 100%;       /* Ensures the footer extends the full width of the viewport */
+    background-color: #757575; /* Background color of the footer */
+    color: #fff;       /* Text color */
+    text-align: center;/* Centers the text inside the footer */
+    padding: 5px;     /* Adds padding inside the footer for spacing */
+    box-sizing: border-box; /* Ensures padding does not affect the total width of the footer */
+}
+
+.page-footer p {
+    margin: 0; /* Removes default margin from paragraph tags */
+}
+
+.team-members {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 18px; /* Slightly larger font size for emphasis */
+    color: #333; /* Darker shade for more formality */
+    font-weight: bold; /* Bold text for importance */
+    text-transform: uppercase; /* Uppercase for a distinguished look */
+    letter-spacing: 1px; /* Space out the letters for readability */
+    border-top: 1px solid #ddd; /* A subtle line above the names for separation */
+    padding-bottom: 20px; /* Space below the text */
+    display: block; /* Ensure it's a block-level element for layout control */
+    text-align: center; /* Center alignment for prominence */
+}
+.team-membersEmail {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 16px; /* Slightly larger font size for emphasis */
+    color: #333; /* Darker shade for more formality */
+    font-weight: bold; /* Bold text for importance */ /* Uppercase for a distinguished look */
+    letter-spacing: 1px; /* Space out the letters for readability */
+    border-top: 1px solid #ddd; /* A subtle line above the names for separation */
+    padding-bottom: 20px; /* Space below the text */
+    display: block; /* Ensure it's a block-level element for layout control */
+    text-align: center; /* Center alignment for prominence */
+}
